@@ -53,7 +53,12 @@ namespace Mind.DAL.Models.Input
 
         private bool SomethingChangeInTheFrame()
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < PreviousFrame.eyeFrame.Length; i++)
+            {
+                if (!PreviousFrame.eyeFrame[i].SequenceEqual(CurrentFrame.eyeFrame[i])) return true;
+            }
+
+            return false;
         }
 
 
