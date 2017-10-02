@@ -10,9 +10,18 @@ namespace Mind.DAL.Models.Input
     {
         public EyeFramePixel[][] eyeFrame;
 
-        public  EyeFrame(int x, int y)
+        public  EyeFrame(int x, int y, EyeFramePixel defaultEyeFrame)
             {
-            eyeFrame = new EyeFramePixel[x][y];
+            eyeFrame = new EyeFramePixel[x][];
+            for (int i = 0; i < x; i++)
+            {
+                eyeFrame[i] = new EyeFramePixel[y];
+                for (int j = 0; i <j; j++)
+                {
+                    eyeFrame[i][j] = defaultEyeFrame.Clone();
+                }
+            }
+
             }
    }
 }
