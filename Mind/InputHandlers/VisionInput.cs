@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InputHandlers.InputEvents;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,9 @@ namespace Mind.DAL.Models.Input
         private EyeFrame PreviousFrame { get; set; }
         private List<EyeFrame> FrameBuffer { get; set; }
         public Boolean Recording { get; set; }
+
+        public event VisualEventHandler VisualEvent;
+
         public void Tick()
         {   if(Recording && !SomethingChangeInTheFrame())
             if(SomethingChangeInTheFrame())
@@ -39,7 +43,7 @@ namespace Mind.DAL.Models.Input
 
         private void SendVisualMemoryToProcess()
         {
-            throw new NotImplementedException();
+            OnVisualMemoryCaptured(new VisualEventArgs(FrameBuffer));
         }
 
         private void StartRecordVisualMemory()
@@ -50,6 +54,13 @@ namespace Mind.DAL.Models.Input
         private bool SomethingChangeInTheFrame()
         {
             throw new NotImplementedException();
+        }
+
+
+        protected virtual void OnVisualMemoryCaptured(VisualEventArgs e)
+        {
+            if (VisualEvent != null)
+                VisualEvent(this, e);
         }
     }
 }

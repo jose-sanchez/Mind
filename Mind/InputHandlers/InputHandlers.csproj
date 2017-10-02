@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="InputEvents\VisualEventArgs.cs" />
+    <Compile Include="InputEvents\VisualEventHandler.cs" />
     <Compile Include="InputBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VisionInput.cs" />
