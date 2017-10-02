@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Models\Input\EyeFrame.cs" />
+    <Compile Include="Models\Input\EyeFramePixel.cs" />
     <Compile Include="Models\Input\InputBase.cs" />
     <Compile Include="Models\Input\VisionInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
