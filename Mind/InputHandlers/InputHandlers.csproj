@@ -45,6 +45,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VisionInput.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mind.DAL\Mind.DAL.csproj">
+      <Project>{bb5e5d4d-0605-4277-9ced-ca9b1ac240b7}</Project>
+      <Name>Mind.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
