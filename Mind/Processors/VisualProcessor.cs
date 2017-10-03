@@ -44,6 +44,7 @@ namespace Processors
 
         private object  ReduceVisualMemory()
         {
+            //Produce list of LexicalMemory , and list of VisualFrameMemory
             throw new NotImplementedException();
         }
     }

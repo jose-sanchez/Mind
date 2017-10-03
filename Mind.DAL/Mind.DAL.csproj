@@ -43,6 +43,9 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Models\Input\EyeFrame.cs" />
     <Compile Include="Models\Input\EyeFramePixel.cs" />
+    <Compile Include="Models\Memory\LexicalMemory.cs" />
+    <Compile Include="Models\Memory\LexicalVisualAssociativeMemory.cs" />
+    <Compile Include="Models\Memory\VisualFrameMemory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
